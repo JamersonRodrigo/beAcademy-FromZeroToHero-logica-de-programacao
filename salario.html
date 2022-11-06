@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário</title>
+</head>
+<body>
+    <input type="text" id="nome">
+    <input type="number" id="salario">
+    <button id="iniciar" onclick="iniciar()">Iniciar</button>
+    <div id="res"></div>
+
+    <script>
+        var nome=document.getElementById("nome")
+        var salario=document.getElementById("salario")
+        var res=document.getElementById("res")
+
+        function iniciar(){
+            res.innerHTML=`
+            ${nome.value} Monteiro <br>
+            ${Number(salario.value)} <br>
+            Salário: ${Number(salario.value)} <br>
+            Salário menor que o mínimo: ${Number(salario.value)<1200}<br>
+            Salário maior que o mínimo: ${Number(salario.value)>1200}<br>
+            Salário diferente do mínimo: ${Number(salario.value)!=1200}<br>
+            Salário igual ao mínimo: ${Number(salario.value)==1200}<br>
+            Resto da divisão de 5 por 2: ${5%2}<br>
+            Salário é maior que o mínimo e menor que 5000: ${(Number(salario.value)>1200) && (Number(salario.value)<5000)}
+            `
+        }
+    </script>
+</body>
+</html>

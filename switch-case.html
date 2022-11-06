@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch-Case</title>
+    <style>
+        *{
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <label for="">Digite o primeiro numero </label>
+    <input type="number" id="primeironum">
+    <br>
+    <label for="">Digite a operação: </label>
+    <input type="text" id="sinal">
+    <br>
+    <label for="">Digite o segundo número:</label>
+    <input type="number" id="segundonum">
+    <button onclick="calcular()">CALCULAR</button>
+
+
+    <script>
+        var numero1=document.getElementById("primeironum")
+        var numero2=document.getElementById("segundonum")
+        var sinal=document.getElementById("sinal")
+
+        function calcular(){
+            switch(sinal){
+                case sinal.value==="+":
+                    document.write("Resultado: "+numero1+numero2)
+            }
+                
+        }
+
+    </script>
+
+
+</body>
+</html>

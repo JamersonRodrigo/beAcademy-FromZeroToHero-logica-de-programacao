@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota aluno</title>
+</head>
+<body>
+    <input type="number" id="nota1">
+    <input type="number" id="nota2">
+    <button id="media" onclick="escreva()">Ver média</button>
+    <div id="res"></div>
+
+    <script>
+        var nota1=document.getElementById("nota1")
+        var nota2=document.getElementById("nota2")
+        var res=document.getElementById("res")
+
+        function escreva(){
+            document.write("Média obtida: "+(Number(nota1.value)+Number(nota2.value))/2)
+        }
+    </script>
+</body>
+</html>
