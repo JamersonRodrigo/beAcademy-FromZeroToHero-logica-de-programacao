@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saque usando o Do While</title>
+</head>
+<body>
+    Seu saldo é R$ 1000,00
+    <br>
+    Valor para saques permitido: R$ 150,00
+    <br>
+    <label for="">Realizar saque?</label>
+    <button onclick="sacar()">SACAR</button>
+    <div id="res"></div>
+
+    <script>
+
+        var saldo=1000
+        var saque=150
+        var res=document.getElementById("res")
+
+        function sacar(){
+            do{
+                res.innerHTML+=`Saque de ${saque} realizado <br> Seu saldo é ${saldo-saque} <br>`
+                saldo=saldo-saque
+            }while(saldo>saque)
+        }
+
+
+    </script>
+</body>
+</html>

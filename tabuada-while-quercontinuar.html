@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada com o While</title>
+</head>
+<body>
+    Digite um numero
+    <input type="text" id="num">
+    <button onclick="tabuada()">Calcular</button>
+    <div id="res"></div>
+    <script>
+        var res=document.getElementById("res")
+        var num=document.getElementById("num")
+
+        function tabuada(){
+            res.innerHTML=""
+            var i=1
+            while(i<11){
+                res.innerHTML+=`${num.value} x ${i} =`+(Number(num.value)*i)+"<br>"
+                i++
+            }
+            res.innerHTML+="Quer realizar mais um cálculo ? preencha o campo novamente."
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validando senha com While</title>
+</head>
+<body>
+    <label for="">Digite seu nome</label>
+    <input type="text" id="nome">
+    <br>
+    <label for="">Digite sua senha</label>
+    <input type="password" id="senha">
+    <br>
+    <button onclick="iniciar()">Iniciar</button>
+    <div id="res"></div>
+
+    <script>
+        var nome=document.getElementById("nome")
+        var senha=document.getElementById("senha")
+        var res=document.getElementById("res")
+
+        function iniciar(){
+            var i=1
+
+            while(i<=1){
+                res.innerHTML=""
+                if(nome.value=="Marcos" && senha.value=="paylivre"){
+                    res.innerHTML="Seja bem vindo, Marcos!"
+                    i++
+                }else{
+                    res.innerHTML="Usuário ou senha INCORRETA!"
+                    i++
+                    nome.value=""
+                    senha.value=""
+                }
+
+                
+
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>
