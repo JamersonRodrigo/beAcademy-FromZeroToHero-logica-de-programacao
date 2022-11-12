@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplos de 2</title>
+    <style>
+        *{
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    Multiplos de 3, de 3 até 100
+    <button onclick="calcular()">Começar</button>
+    <var id="res"></var>
+
+    <script>
+
+        var res=document.getElementById("res")
+        function calcular(){
+            res.innerHTML=""
+            for(i=3;i<100;i+3){
+                res.innerHTML+=i+"<br>"
+            }
+        }
+    </script>
+</body>

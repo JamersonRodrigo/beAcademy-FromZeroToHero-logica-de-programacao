@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulo ou quadrado</title>
+    <style>
+        *{
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Escolha quadrado ou Triangulo</h2>
+    <label for="">Digite a figura geometrica que você quer calcular <br> Digite "Q" para quadrado e "T" para triangulo:</label>
+    <input type="text" id="figura">
+    <br>
+    Digite a altura:
+    <input type="number" id="altura">
+    <br>
+    Digite a base:
+    <input type="number" id="base">
+    <br>
+    Em caso de escolher "Quadrado" não é obrigatório preencher os 2 campos
+    <br>
+    <button onclick="calcular()">CALCULAR</button>
+    <div id="res"></div>
+
+
+    <script>
+        var altura=document.getElementById("altura")
+        var base=document.getElementById("base")
+        var figura=document.getElementById("figura")
+        var res=document.getElementById("res")
+        
+
+        function calcular(){
+            if(figura.value=="Q"){
+                res.innerHTML=`A area do Quadrado é: ${Number(base.value*4)} `
+            }else if(figura.value=="T"){
+                res.innerHTML=`A area do Triangulo é: ${(Number(base.value)*Number(altura.value)/2)} `
+            }
+        }
+    </script>
+
+</body>
+</html>
